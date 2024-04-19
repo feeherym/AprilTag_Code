@@ -1,0 +1,25 @@
+/**:
+    ros__parameters:
+        image_transport: raw    # image format
+        family: 36h11           # tag family name
+        size: 0.173             # tag edge size in meter
+        max_hamming: 0          # maximum allowed hamming distance (corrected bits)
+
+        # see "apriltag.h" 'struct apriltag_detector' for more documentation on these optional parameters
+        detector:
+            threads: 1          # number of threads
+            decimate: 2.0       # decimate resolution for quad detection
+            blur: 0.0           # sigma of Gaussian blur for quad detection
+            refine: True        # snap to strong gradients
+            sharpening: 0.25    # sharpening of decoded images
+            debug: False        # write additional debugging images to current working directory
+
+        # optional list of tags
+        tag:
+#            ids: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]            # tag ID
+#            frames: [april_tag_frame_id_0, april_tag_frame_id_1, april_tag_frame_id_2, april_tag_frame_id_3, april_tag_frame_id_4, april_tag_frame_id_5, april_tag_frame_id_6, april_tag_frame_id_7, #april_tag_frame_id_8,april_tag_frame_id_9, april_tag_frame_id_10, april_tag_frame_id_11, april_tag_frame_id_12, april_tag_frame_id_13, april_tag_frame_id_14, april_tag_frame_id_15, #april_tag_frame_id_16, april_tag_frame_id_17, april_tag_frame_id_18, april_tag_frame_id_19]   # frame names
+#            sizes:  [0.162, 0.162, 0.162, 0.162, 0.162, 0.162, 0.162, 0.162, 0.162, 0.162, 0.162, 0.162, 0.162, 0.162, 0.162, 0.162, 0.162, 0.162, 0.162, 0.162] 
+            ids: [0, 1]
+            frames: [base, object]  # optional frame name
+            sizes: [0.162, 0.162]   # optional tag-specific edge size
+
