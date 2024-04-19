@@ -3,6 +3,7 @@
 Requirements:
 Ubuntu 20.04
 ROS Noetic
+apriltag https://github.com/AprilRobotics/apriltag
 
 Configuration Files:
 
